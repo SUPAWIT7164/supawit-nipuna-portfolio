@@ -1,0 +1,70 @@
+import type { SkillCategory } from "@/types";
+
+export const skillCategories: SkillCategory[] = [
+  {
+    id: "frontend",
+    title: "Frontend",
+    description: "พัฒนาหน้าเว็บที่ใช้งานง่าย และรองรับการทำงานจริง",
+    skills: [
+      "Vue.js",
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "Bootstrap",
+      "Vuetify",
+      "jQuery",
+      "React.js",
+    ],
+  },
+  {
+    id: "backend",
+    title: "Backend",
+    description: "พัฒนา API และบริการฝั่งเซิร์ฟเวอร์สำหรับระบบองค์กร",
+    skills: [
+      "PHP",
+      "Laravel",
+      "Node.js",
+      "Express",
+      "RESTful API",
+      "LDAP / Active Directory",
+      "Microsoft OAuth (Azure AD)",
+    ],
+  },
+  {
+    id: "database",
+    title: "Database",
+    description: "ออกแบบและจัดการฐานข้อมูลสำหรับแอปพลิเคชันจริง",
+    skills: ["MySQL", "SQL Server", "Microsoft SQL Server", "Firebase"],
+  },
+  {
+    id: "tools",
+    title: "Tools",
+    description: "เครื่องมือที่ใช้ในการพัฒนา Deploy และดูแลระบบ",
+    skills: [
+      "Git",
+      "GitHub",
+      "Visual Studio Code",
+      "Cursor",
+      "Claude",
+      "Postman",
+      "Hyper-V",
+      "PowerShell",
+      "IIS",
+    ],
+  },
+  {
+    id: "other",
+    title: "Other Technologies",
+    description: "เทคโนโลยีเสริมด้าน IoT ความปลอดภัย และการประมวลผลภาพ",
+    skills: [
+      "IoT Integration",
+      "Home Assistant",
+      "Hikvision ISAPI",
+      "Face Recognition",
+      "Image Processing",
+      "CCTV / NVR",
+      "SSO",
+      "Windows Server",
+    ],
+  },
+];

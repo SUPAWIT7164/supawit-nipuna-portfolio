@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="800" viewBox="0 0 1280 800" role="img" aria-label="AGNOS Patient Portal screenshot">
+  <rect width="1280" height="800" fill="#F8FAFC"/>
+  <rect width="240" height="800" fill="#FFFFFF" stroke="#E4E7EC"/>
+  <rect x="240" width="1040" height="72" fill="#FFFFFF" stroke="#E4E7EC"/>
+  <rect x="32" y="28" width="120" height="14" rx="7" fill="#0B66FF"/>
+  <rect x="32" y="120" width="176" height="36" rx="10" fill="#E8F1FF"/>
+  <rect x="32" y="172" width="176" height="36" rx="10" fill="#F2F4F7"/>
+  <rect x="32" y="224" width="176" height="36" rx="10" fill="#F2F4F7"/>
+  <rect x="32" y="276" width="176" height="36" rx="10" fill="#F2F4F7"/>
+  <text x="280" y="46" font-family="Arial, sans-serif" font-size="20" fill="#101828">Patient Portal</text>
+  <rect x="280" y="112" width="300" height="140" rx="16" fill="#FFFFFF" stroke="#E4E7EC"/>
+  <rect x="304" y="136" width="140" height="12" rx="6" fill="#98A2B3"/>
+  <rect x="304" y="168" width="90" height="28" rx="8" fill="#0B66FF"/>
+  <rect x="304" y="212" width="180" height="10" rx="5" fill="#E4E7EC"/>
+  <rect x="600" y="112" width="300" height="140" rx="16" fill="#FFFFFF" stroke="#E4E7EC"/>
+  <rect x="624" y="136" width="160" height="12" rx="6" fill="#98A2B3"/>
+  <rect x="624" y="168" width="200" height="10" rx="5" fill="#E4E7EC"/>
+  <rect x="624" y="192" width="160" height="10" rx="5" fill="#E4E7EC"/>
+  <rect x="624" y="216" width="120" height="10" rx="5" fill="#D1E4FF"/>
+  <rect x="920" y="112" width="300" height="140" rx="16" fill="#FFFFFF" stroke="#E4E7EC"/>
+  <circle cx="980" cy="182" r="36" fill="#E8F1FF"/>
+  <rect x="1040" y="164" width="140" height="12" rx="6" fill="#98A2B3"/>
+  <rect x="1040" y="188" width="100" height="10" rx="5" fill="#E4E7EC"/>
+  <rect x="280" y="280" width="940" height="440" rx="16" fill="#FFFFFF" stroke="#E4E7EC"/>
+  <rect x="312" y="312" width="220" height="14" rx="7" fill="#101828"/>
+  <rect x="312" y="360" width="876" height="56" rx="12" fill="#F8FAFC" stroke="#E4E7EC"/>
+  <rect x="312" y="436" width="876" height="56" rx="12" fill="#F8FAFC" stroke="#E4E7EC"/>
+  <rect x="312" y="512" width="876" height="56" rx="12" fill="#F8FAFC" stroke="#E4E7EC"/>
+  <rect x="312" y="588" width="876" height="56" rx="12" fill="#E8F1FF" stroke="#BFDBFE"/>
+  <text x="280" y="770" font-family="Arial, sans-serif" font-size="16" fill="#0B66FF">AGNOS Patient Portal</text>
+</svg>

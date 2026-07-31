@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="800" viewBox="0 0 1280 800" role="img" aria-label="Room Booking System screenshot">
+  <rect width="1280" height="800" fill="#F8FAFC"/>
+  <rect x="48" y="48" width="1184" height="704" rx="20" fill="#FFFFFF" stroke="#E4E7EC"/>
+  <rect x="80" y="80" width="200" height="18" rx="9" fill="#101828"/>
+  <rect x="980" y="72" width="210" height="40" rx="10" fill="#0B66FF"/>
+  <g>
+    <rect x="80" y="150" width="150" height="540" rx="14" fill="#F8FAFC" stroke="#E4E7EC"/>
+    <rect x="100" y="180" width="110" height="12" rx="6" fill="#98A2B3"/>
+    <rect x="100" y="220" width="110" height="36" rx="10" fill="#E8F1FF"/>
+    <rect x="100" y="272" width="110" height="36" rx="10" fill="#FFFFFF" stroke="#E4E7EC"/>
+    <rect x="100" y="324" width="110" height="36" rx="10" fill="#FFFFFF" stroke="#E4E7EC"/>
+  </g>
+  <g>
+    <rect x="260" y="150" width="930" height="80" rx="14" fill="#F8FAFC" stroke="#E4E7EC"/>
+    <rect x="284" y="178" width="80" height="24" rx="8" fill="#E4E7EC"/>
+    <rect x="380" y="178" width="80" height="24" rx="8" fill="#E4E7EC"/>
+    <rect x="476" y="178" width="80" height="24" rx="8" fill="#0B66FF"/>
+    <rect x="572" y="178" width="80" height="24" rx="8" fill="#E4E7EC"/>
+  </g>
+  <g>
+    <rect x="260" y="254" width="210" height="120" rx="14" fill="#DBEAFE" stroke="#93C5FD"/>
+    <rect x="490" y="254" width="210" height="120" rx="14" fill="#FFFFFF" stroke="#E4E7EC"/>
+    <rect x="720" y="254" width="210" height="120" rx="14" fill="#DCFCE7" stroke="#86EFAC"/>
+    <rect x="950" y="254" width="240" height="120" rx="14" fill="#FFFFFF" stroke="#E4E7EC"/>
+    <rect x="260" y="394" width="210" height="120" rx="14" fill="#FFFFFF" stroke="#E4E7EC"/>
+    <rect x="490" y="394" width="210" height="120" rx="14" fill="#FEF3C7" stroke="#FCD34D"/>
+    <rect x="720" y="394" width="210" height="120" rx="14" fill="#FFFFFF" stroke="#E4E7EC"/>
+    <rect x="950" y="394" width="240" height="120" rx="14" fill="#DBEAFE" stroke="#93C5FD"/>
+    <rect x="260" y="534" width="930" height="120" rx="14" fill="#F8FAFC" stroke="#E4E7EC"/>
+  </g>
+  <text x="80" y="730" font-family="Arial, sans-serif" font-size="16" fill="#0B66FF">Room Booking System</text>
+</svg>

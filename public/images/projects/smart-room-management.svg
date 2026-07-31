@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="800" viewBox="0 0 1280 800" role="img" aria-label="Smart Room Management Portal screenshot">
+  <rect width="1280" height="800" fill="#F8FAFC"/>
+  <rect x="40" y="40" width="1200" height="720" rx="20" fill="#FFFFFF" stroke="#E4E7EC"/>
+  <rect x="72" y="72" width="180" height="16" rx="8" fill="#0B66FF"/>
+  <rect x="72" y="120" width="280" height="140" rx="16" fill="#EFF6FF" stroke="#BFDBFE"/>
+  <rect x="372" y="120" width="280" height="140" rx="16" fill="#F0FDF4" stroke="#BBF7D0"/>
+  <rect x="672" y="120" width="280" height="140" rx="16" fill="#FFF7ED" stroke="#FED7AA"/>
+  <rect x="972" y="120" width="220" height="140" rx="16" fill="#F8FAFC" stroke="#E4E7EC"/>
+  <g>
+    <rect x="72" y="300" width="360" height="220" rx="16" fill="#FFFFFF" stroke="#E4E7EC"/>
+    <rect x="96" y="324" width="120" height="12" rx="6" fill="#98A2B3"/>
+    <rect x="96" y="360" width="312" height="120" rx="12" fill="#EEF2F7"/>
+    <rect x="120" y="420" width="80" height="28" rx="8" fill="#22C55E"/>
+    <rect x="220" y="420" width="80" height="28" rx="8" fill="#0B66FF"/>
+  </g>
+  <g>
+    <rect x="456" y="300" width="360" height="220" rx="16" fill="#FFFFFF" stroke="#E4E7EC"/>
+    <rect x="480" y="324" width="140" height="12" rx="6" fill="#98A2B3"/>
+    <polyline points="500,480 560,430 620,450 700,380 780,400" fill="none" stroke="#0B66FF" stroke-width="4"/>
+  </g>
+  <g>
+    <rect x="840" y="300" width="352" height="220" rx="16" fill="#FFFFFF" stroke="#E4E7EC"/>
+    <rect x="864" y="340" width="304" height="40" rx="10" fill="#F2F4F7"/>
+    <rect x="864" y="396" width="304" height="40" rx="10" fill="#E8F1FF"/>
+    <rect x="864" y="452" width="304" height="40" rx="10" fill="#F2F4F7"/>
+  </g>
+  <rect x="72" y="560" width="1120" height="160" rx="16" fill="#0B1220"/>
+  <rect x="104" y="600" width="160" height="12" rx="6" fill="#98A2B3"/>
+  <rect x="104" y="640" width="240" height="28" rx="8" fill="#3B82F6"/>
+  <text x="72" y="740" font-family="Arial, sans-serif" font-size="16" fill="#0B66FF">Smart Room Management</text>
+</svg>

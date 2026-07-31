@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="800" viewBox="0 0 1280 800" role="img" aria-label="IoT Dashboard screenshot">
+  <rect width="1280" height="800" fill="#F8FAFC"/>
+  <rect x="40" y="40" width="1200" height="720" rx="20" fill="#FFFFFF" stroke="#E4E7EC"/>
+  <circle cx="96" cy="96" r="14" fill="#22C55E"/>
+  <rect x="128" y="86" width="220" height="18" rx="9" fill="#101828"/>
+  <rect x="72" y="150" width="360" height="250" rx="16" fill="#F8FAFC" stroke="#E4E7EC"/>
+  <circle cx="252" cy="275" r="70" fill="none" stroke="#E4E7EC" stroke-width="16"/>
+  <circle cx="252" cy="275" r="70" fill="none" stroke="#0B66FF" stroke-width="16" stroke-dasharray="280 440" stroke-linecap="round" transform="rotate(-90 252 275)"/>
+  <rect x="456" y="150" width="360" height="250" rx="16" fill="#F8FAFC" stroke="#E4E7EC"/>
+  <polyline points="500,340 560,300 620,310 690,240 780,260" fill="none" stroke="#0B66FF" stroke-width="4"/>
+  <rect x="840" y="150" width="360" height="250" rx="16" fill="#F8FAFC" stroke="#E4E7EC"/>
+  <rect x="876" y="190" width="48" height="160" rx="8" fill="#BFDBFE"/>
+  <rect x="948" y="230" width="48" height="120" rx="8" fill="#60A5FA"/>
+  <rect x="1020" y="210" width="48" height="140" rx="8" fill="#93C5FD"/>
+  <rect x="1092" y="250" width="48" height="100" rx="8" fill="#0B66FF"/>
+  <rect x="72" y="430" width="1128" height="280" rx="16" fill="#FFFFFF" stroke="#E4E7EC"/>
+  <rect x="104" y="462" width="180" height="14" rx="7" fill="#101828"/>
+  <rect x="104" y="510" width="1064" height="48" rx="12" fill="#EEF2F7"/>
+  <rect x="104" y="574" width="1064" height="48" rx="12" fill="#E8F1FF"/>
+  <rect x="104" y="638" width="1064" height="48" rx="12" fill="#EEF2F7"/>
+  <text x="72" y="740" font-family="Arial, sans-serif" font-size="16" fill="#0B66FF">IoT Dashboard</text>
+</svg>
