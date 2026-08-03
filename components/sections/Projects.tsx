@@ -12,7 +12,7 @@ export function Projects() {
           <SectionHeading
             eyebrow="Featured Projects"
             title="โปรเจกต์เด่น"
-            description="งานที่เกี่ยวข้องกับ Patient Portal, ระบบจองห้อง, อาคารอัจฉริยะ, IoT และ Access Control"
+            description="งานที่เกี่ยวข้องกับ Smart Room, ระบบจองห้อง, Patient Portal, อาคารอัจฉริยะ และ Access Control"
           />
         </FadeIn>
 

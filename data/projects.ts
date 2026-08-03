@@ -2,30 +2,6 @@ import type { Project } from "@/types";
 
 export const projects: Project[] = [
   {
-    id: "agnos-patient-portal",
-    title: "AGNOS Patient Portal",
-    tagline: "พอร์ทัลผู้ป่วยแบบเรียลไทม์",
-    description:
-      "ระบบ Patient Portal สำหรับแบบฟอร์มผู้ป่วยและมุมมองของเจ้าหน้าที่ รองรับการทำงานแบบ Real-time ด้วย Web Application",
-    image: "/images/projects/agnos-patient-portal.png",
-    technologies: ["Next.js", "TypeScript", "Socket.IO", "JavaScript"],
-    responsibilities: [
-      "พัฒนาหน้าจอสำหรับผู้ป่วยและเจ้าหน้าที่",
-      "เชื่อมต่อการอัปเดตข้อมูลแบบ Real-time",
-      "ปรับปรุงประสบการณ์ใช้งานให้ชัดเจนและพร้อมใช้งานจริง",
-    ],
-    challenges: [
-      "จัดการสถานะข้อมูลแบบ Real-time ให้เสถียร",
-      "ออกแบบ UI ให้ใช้งานง่ายสำหรับผู้ใช้หลากหลายกลุ่ม",
-    ],
-    results: [
-      "ส่งมอบพอร์ทัลที่รองรับการใช้งานจริง",
-      "เพิ่มความรวดเร็วในการดูและอัปเดตข้อมูลผู้ป่วย",
-    ],
-    featured: true,
-    githubUrl: "https://github.com/SUPAWIT7164/agnos-patient-portal",
-  },
-  {
     id: "smart-room-management",
     title: "Smart Room Management Portal",
     tagline: "ระบบบริหารห้องและอาคารอัจฉริยะ",
@@ -53,6 +29,30 @@ export const projects: Project[] = [
       "ควบคุมไฟ แอร์ และ ERV ผ่าน Web Application ได้จริง",
       "ช่วยทีมปฏิบัติการติดตามสถานะอาคารได้ชัดเจนขึ้น",
     ],
+    featured: true,
+  },
+  {
+    id: "agnos-patient-portal",
+    title: "AGNOS Patient Portal",
+    tagline: "พอร์ทัลผู้ป่วยแบบเรียลไทม์",
+    description:
+      "ระบบ Patient Portal สำหรับแบบฟอร์มผู้ป่วยและมุมมองของเจ้าหน้าที่ รองรับการทำงานแบบ Real-time ด้วย Web Application",
+    image: "/images/projects/agnos-patient-portal.png",
+    technologies: ["Next.js", "TypeScript", "Socket.IO", "JavaScript"],
+    responsibilities: [
+      "พัฒนาหน้าจอสำหรับผู้ป่วยและเจ้าหน้าที่",
+      "เชื่อมต่อการอัปเดตข้อมูลแบบ Real-time",
+      "ปรับปรุงประสบการณ์ใช้งานให้ชัดเจนและพร้อมใช้งานจริง",
+    ],
+    challenges: [
+      "จัดการสถานะข้อมูลแบบ Real-time ให้เสถียร",
+      "ออกแบบ UI ให้ใช้งานง่ายสำหรับผู้ใช้หลากหลายกลุ่ม",
+    ],
+    results: [
+      "ส่งมอบพอร์ทัลที่รองรับการใช้งานจริง",
+      "เพิ่มความรวดเร็วในการดูและอัปเดตข้อมูลผู้ป่วย",
+    ],
+    githubUrl: "https://github.com/SUPAWIT7164/agnos-patient-portal",
   },
   {
     id: "room-booking-system",
