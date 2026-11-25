@@ -63,7 +63,7 @@ export function ProjectCard({ project, organization }: ProjectCardProps) {
           project.featured ? "lg:grid-cols-[1.05fr_0.95fr]" : "grid-cols-1",
         )}
       >
-        <div className="relative aspect-[16/10] overflow-hidden bg-surface-muted">
+        <div className="relative aspect-video overflow-hidden bg-[#0b1220]">
           <Image
             key={current.image}
             src={current.image}
@@ -75,11 +75,7 @@ export function ProjectCard({ project, organization }: ProjectCardProps) {
                 ? "(max-width: 1024px) 100vw, 55vw"
                 : "(max-width: 768px) 100vw, 50vw"
             }
-            className="object-cover object-top transition-transform duration-500 group-hover:scale-[1.03]"
-          />
-          <div
-            aria-hidden
-            className="pointer-events-none absolute inset-0 bg-gradient-to-t from-foreground/35 via-transparent to-transparent opacity-70"
+            className="object-contain object-center"
           />
 
           {project.featured ? (
