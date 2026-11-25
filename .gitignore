@@ -33,6 +33,11 @@
 /IoT & Access Control Platform.png
 /Screenshot*.png
 
+# raw capture dumps — site uses renamed copies under public/images/projects
+/public/images/image (*).png
+/public/images/สกรีนช็อต*.png
+/public/images/รูป*.png
+
 # debug
 npm-debug.log*
 yarn-debug.log*

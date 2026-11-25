@@ -2,24 +2,58 @@
 
 import Image from "next/image";
 import { useState } from "react";
-import { ChevronDown } from "lucide-react";
-import type { Project } from "@/types";
+import { ChevronDown, ChevronLeft, ChevronRight } from "lucide-react";
+import type { Project, ProjectOrganization, ProjectScreen } from "@/types";
 import { Badge } from "@/components/ui/Badge";
 import { cn } from "@/lib/utils";
 
 interface ProjectCardProps {
   project: Project;
+  organization?: ProjectOrganization;
 }
 
-export function ProjectCard({ project }: ProjectCardProps) {
+const themeStyles: Record<
+  ProjectOrganization["theme"],
+  { ring: string; label: string }
+> = {
+  orange: {
+    ring: "border-orange-400/40 ring-1 ring-orange-400/15",
+    label: "text-orange-600 dark:text-orange-300",
+  },
+  blue: {
+    ring: "border-sky-400/40 ring-1 ring-sky-400/15",
+    label: "text-sky-600 dark:text-sky-300",
+  },
+  green: {
+    ring: "border-emerald-400/40 ring-1 ring-emerald-400/15",
+    label: "text-emerald-600 dark:text-emerald-300",
+  },
+};
+
+export function ProjectCard({ project, organization }: ProjectCardProps) {
   const [expanded, setExpanded] = useState(Boolean(project.featured));
+  const screens = project.screens?.length
+    ? project.screens
+    : [{ label: project.title, image: project.image } satisfies ProjectScreen];
+  const [activeScreen, setActiveScreen] = useState(0);
+  const current = screens[activeScreen] ?? screens[0];
+  const theme = organization ? themeStyles[organization.theme] : null;
+  const hasGallery = screens.length > 1;
+
+  function showPrevious() {
+    setActiveScreen((index) => (index - 1 + screens.length) % screens.length);
+  }
+
+  function showNext() {
+    setActiveScreen((index) => (index + 1) % screens.length);
+  }
 
   return (
     <article
       className={cn(
         "group overflow-hidden rounded-2xl border bg-surface/90 shadow-soft backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-elevated",
         project.featured
-          ? "border-accent/30 ring-1 ring-accent/10 lg:col-span-2"
+          ? cn("lg:col-span-2", theme?.ring ?? "border-accent/30 ring-1 ring-accent/10")
           : "border-border hover:border-accent/25",
       )}
     >
@@ -31,8 +65,9 @@ export function ProjectCard({ project }: ProjectCardProps) {
       >
         <div className="relative aspect-[16/10] overflow-hidden bg-surface-muted">
           <Image
-            src={project.image}
-            alt={`${project.title} screenshot`}
+            key={current.image}
+            src={current.image}
+            alt={`${project.title} — ${current.label}`}
             fill
             loading={project.featured ? "eager" : "lazy"}
             sizes={
@@ -40,21 +75,63 @@ export function ProjectCard({ project }: ProjectCardProps) {
                 ? "(max-width: 1024px) 100vw, 55vw"
                 : "(max-width: 768px) 100vw, 50vw"
             }
-            className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+            className="object-cover object-top transition-transform duration-500 group-hover:scale-[1.03]"
           />
           <div
             aria-hidden
-            className="pointer-events-none absolute inset-0 bg-gradient-to-t from-foreground/20 via-transparent to-transparent opacity-60"
+            className="pointer-events-none absolute inset-0 bg-gradient-to-t from-foreground/35 via-transparent to-transparent opacity-70"
           />
+
           {project.featured ? (
             <div className="absolute left-4 top-4">
               <Badge tone="accent">Featured</Badge>
             </div>
           ) : null}
+
+          {hasGallery ? (
+            <>
+              <div className="absolute bottom-4 left-4 right-4 flex items-end justify-between gap-3">
+                <div className="min-w-0 rounded-lg bg-foreground/70 px-3 py-2 text-white backdrop-blur-sm">
+                  <p className="truncate text-sm font-semibold">{current.label}</p>
+                  {current.route ? (
+                    <p className="truncate font-mono text-xs text-white/80">{current.route}</p>
+                  ) : null}
+                </div>
+                <div className="flex shrink-0 items-center gap-2">
+                  <button
+                    type="button"
+                    onClick={showPrevious}
+                    className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-white/90 text-foreground shadow-soft transition hover:bg-white"
+                    aria-label="Previous screen"
+                  >
+                    <ChevronLeft className="h-4 w-4" />
+                  </button>
+                  <button
+                    type="button"
+                    onClick={showNext}
+                    className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-white/90 text-foreground shadow-soft transition hover:bg-white"
+                    aria-label="Next screen"
+                  >
+                    <ChevronRight className="h-4 w-4" />
+                  </button>
+                </div>
+              </div>
+            </>
+          ) : null}
         </div>
 
         <div className="flex flex-col p-6 sm:p-8">
-          <p className="text-sm font-semibold tracking-wide text-accent">
+          {organization ? (
+            <p className={cn("text-xs font-semibold tracking-wide", theme?.label)}>
+              {organization.name}
+            </p>
+          ) : null}
+          <p
+            className={cn(
+              "text-sm font-semibold tracking-wide",
+              organization ? "mt-1 text-foreground-muted" : "text-accent",
+            )}
+          >
             {project.tagline}
           </p>
           <h3 className="mt-2 font-display text-2xl tracking-tight text-foreground">
@@ -63,6 +140,26 @@ export function ProjectCard({ project }: ProjectCardProps) {
           <p className="mt-3 text-sm leading-relaxed text-foreground-muted sm:text-base">
             {project.description}
           </p>
+
+          {hasGallery ? (
+            <div className="mt-5 flex flex-wrap gap-2">
+              {screens.map((screen, index) => (
+                <button
+                  key={screen.image}
+                  type="button"
+                  onClick={() => setActiveScreen(index)}
+                  className={cn(
+                    "rounded-lg px-2.5 py-1 text-xs font-medium ring-1 ring-inset transition",
+                    index === activeScreen
+                      ? "bg-accent text-white ring-accent"
+                      : "bg-surface-muted/90 text-foreground-muted ring-border/80 hover:text-foreground",
+                  )}
+                >
+                  {screen.label}
+                </button>
+              ))}
+            </div>
+          ) : null}
 
           <div className="mt-5 flex flex-wrap gap-2">
             {project.technologies.map((tech) => (

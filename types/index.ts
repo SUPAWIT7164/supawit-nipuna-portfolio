@@ -48,12 +48,29 @@ export interface Experience {
   technologies: string[];
 }
 
+export type ProjectTheme = "orange" | "blue" | "green";
+
+export interface ProjectOrganization {
+  id: string;
+  name: string;
+  shortName: string;
+  theme: ProjectTheme;
+}
+
+export interface ProjectScreen {
+  label: string;
+  route?: string;
+  image: string;
+}
+
 export interface Project {
   id: string;
+  organizationId: string;
   title: string;
   tagline: string;
   description: string;
   image: string;
+  screens?: ProjectScreen[];
   technologies: string[];
   responsibilities: string[];
   challenges: string[];

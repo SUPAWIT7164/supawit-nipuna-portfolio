@@ -20,7 +20,7 @@ export const profile: Profile = {
   linkedin: "supawit-nipuna-a66b7031b",
   linkedinUrl: "https://www.linkedin.com/in/supawit-nipuna-a66b7031b/",
   resumeUrl: "/resume.pdf",
-  photoUrl: "/images/profile.png",
+  photoUrl: "/images/ภาพถ่ายบัตรประจำตัวชายหนุ่มในชุดสูท.png",
   availability: "Open to opportunities",
 };
 
