@@ -20,7 +20,7 @@ export function Resume() {
             <SectionHeading
               eyebrow="Resume"
               title="เรซูเม่"
-              description="พรีวิวข้อมูลจาก Resume2026 — กดดาวน์โหลดไฟล์ PDF ฉบับเต็มได้เลย"
+              description="พรีวิวข้อมูลจากเรซูเม่ — กดดาวน์โหลดไฟล์ PDF ฉบับเต็มได้เลย"
             />
             <Button href={profile.resumeUrl} download aria-label="Download resume PDF">
               <Download className="h-4 w-4" />
