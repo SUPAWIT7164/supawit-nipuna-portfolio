@@ -59,15 +59,16 @@ export function ProjectCard({ project, organization }: ProjectCardProps) {
       )}
     >
       <div className="grid md:grid-cols-[1.1fr_0.9fr]">
-        <div className="relative aspect-video overflow-hidden bg-[#0b1220]">
+        <div className="relative overflow-hidden bg-surface-muted">
           <Image
             key={current.image}
             src={current.image}
             alt={`${project.title} — ${current.label}`}
-            fill
+            width={1920}
+            height={1080}
             loading={project.featured ? "eager" : "lazy"}
             sizes="(max-width: 768px) 100vw, 55vw"
-            className="object-contain object-center"
+            className="h-auto w-full"
           />
 
           {project.featured ? (
@@ -77,34 +78,32 @@ export function ProjectCard({ project, organization }: ProjectCardProps) {
           ) : null}
 
           {hasGallery ? (
-            <>
-              <div className="absolute bottom-4 left-4 right-4 flex items-end justify-between gap-3">
-                <div className="min-w-0 rounded-lg bg-foreground/70 px-3 py-2 text-white backdrop-blur-sm">
-                  <p className="truncate text-sm font-semibold">{current.label}</p>
-                  {current.route ? (
-                    <p className="truncate font-mono text-xs text-white/80">{current.route}</p>
-                  ) : null}
-                </div>
-                <div className="flex shrink-0 items-center gap-2">
-                  <button
-                    type="button"
-                    onClick={showPrevious}
-                    className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-white/90 text-foreground shadow-soft transition hover:bg-white"
-                    aria-label="Previous screen"
-                  >
-                    <ChevronLeft className="h-4 w-4" />
-                  </button>
-                  <button
-                    type="button"
-                    onClick={showNext}
-                    className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-white/90 text-foreground shadow-soft transition hover:bg-white"
-                    aria-label="Next screen"
-                  >
-                    <ChevronRight className="h-4 w-4" />
-                  </button>
-                </div>
+            <div className="absolute bottom-4 left-4 right-4 flex items-end justify-between gap-3">
+              <div className="min-w-0 rounded-lg bg-foreground/70 px-3 py-2 text-white backdrop-blur-sm">
+                <p className="truncate text-sm font-semibold">{current.label}</p>
+                {current.route ? (
+                  <p className="truncate font-mono text-xs text-white/80">{current.route}</p>
+                ) : null}
               </div>
-            </>
+              <div className="flex shrink-0 items-center gap-2">
+                <button
+                  type="button"
+                  onClick={showPrevious}
+                  className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-white/90 text-foreground shadow-soft transition hover:bg-white"
+                  aria-label="Previous screen"
+                >
+                  <ChevronLeft className="h-4 w-4" />
+                </button>
+                <button
+                  type="button"
+                  onClick={showNext}
+                  className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-white/90 text-foreground shadow-soft transition hover:bg-white"
+                  aria-label="Next screen"
+                >
+                  <ChevronRight className="h-4 w-4" />
+                </button>
+              </div>
+            </div>
           ) : null}
         </div>
 
