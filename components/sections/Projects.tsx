@@ -48,13 +48,9 @@ export function Projects() {
                   </div>
                 </FadeIn>
 
-                <div className="grid gap-6 lg:grid-cols-2">
+                <div className="grid gap-6">
                   {orgProjects.map((project, index) => (
-                    <FadeIn
-                      key={project.id}
-                      delay={orgIndex * 0.05 + index * 0.04}
-                      className={project.featured ? "lg:col-span-2" : undefined}
-                    >
+                    <FadeIn key={project.id} delay={orgIndex * 0.05 + index * 0.04}>
                       <ProjectCard project={project} organization={organization} />
                     </FadeIn>
                   ))}

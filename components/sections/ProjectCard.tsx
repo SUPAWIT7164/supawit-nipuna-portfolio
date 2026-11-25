@@ -52,17 +52,13 @@ export function ProjectCard({ project, organization }: ProjectCardProps) {
     <article
       className={cn(
         "group overflow-hidden rounded-2xl border bg-surface/90 shadow-soft backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-elevated",
-        project.featured
-          ? cn("lg:col-span-2", theme?.ring ?? "border-accent/30 ring-1 ring-accent/10")
-          : "border-border hover:border-accent/25",
+        theme?.ring ??
+          (project.featured
+            ? "border-accent/30 ring-1 ring-accent/10"
+            : "border-border hover:border-accent/25"),
       )}
     >
-      <div
-        className={cn(
-          "grid",
-          project.featured ? "lg:grid-cols-[1.05fr_0.95fr]" : "grid-cols-1",
-        )}
-      >
+      <div className="grid md:grid-cols-[1.1fr_0.9fr]">
         <div className="relative aspect-video overflow-hidden bg-[#0b1220]">
           <Image
             key={current.image}
@@ -70,11 +66,7 @@ export function ProjectCard({ project, organization }: ProjectCardProps) {
             alt={`${project.title} — ${current.label}`}
             fill
             loading={project.featured ? "eager" : "lazy"}
-            sizes={
-              project.featured
-                ? "(max-width: 1024px) 100vw, 55vw"
-                : "(max-width: 768px) 100vw, 50vw"
-            }
+            sizes="(max-width: 768px) 100vw, 55vw"
             className="object-contain object-center"
           />
 
