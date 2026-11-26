@@ -23,6 +23,60 @@ export const projectOrganizations: ProjectOrganization[] = [
 
 export const projects: Project[] = [
   {
+    id: "rmuti-korat-building-control",
+    organizationId: "rmuti-korat",
+    title: "ระบบควบคุมอาคารอัจฉริยะ",
+    tagline: "RMUTI Innovation Management System",
+    description:
+      "ระบบควบคุมอาคารอัจฉริยะบนผังพื้นที่จริงของอาคาร Innovation Ecosystem เลือกตึก โซน และห้อง แล้วเปิด–ปิดแอร์ ERV พัดลมระบายอากาศ และไฟได้จากแปลน พร้อมดูสถานะ จำนวนคน กล้อง CCTV และค่าเซ็นเซอร์แบบ Real-time",
+    image: "/images/projects/rmuti-korat-control-air.png",
+    screens: [
+      {
+        label: "ระบบปรับอากาศ",
+        image: "/images/projects/rmuti-korat-control-air.png",
+      },
+      {
+        label: "ระบบแลกเปลี่ยนอากาศ (ERV)",
+        image: "/images/projects/rmuti-korat-control-erv.png",
+      },
+      {
+        label: "ระบบแสงสว่าง",
+        image: "/images/projects/rmuti-korat-control-lighting.png",
+      },
+      {
+        label: "ห้องประชุม และ CCTV",
+        image: "/images/projects/rmuti-korat-control-meeting.png",
+      },
+    ],
+    technologies: [
+      "Vue.js 3",
+      "Vuetify",
+      "Node.js",
+      "Express",
+      "Home Assistant",
+      "Hikvision / NVR",
+      "IoT",
+      "REST API",
+    ],
+    responsibilities: [
+      "พัฒนาหน้าผังควบคุมอาคาร เลือกตึก โซน ห้อง และควบคุมอุปกรณ์บนแปลน",
+      "แยกโซนควบคุมตามระบบ: แอร์ ERV พัดลมระบายอากาศ ไฟ และห้องประชุม",
+      "ทำปุ่มเปิด/ปิดทั้งหมด และสรุปจำนวนอุปกรณ์ที่ใช้งานอยู่",
+      "แสดงตำแหน่งกล้อง CCTV และค่าเซ็นเซอร์ของพื้นที่บนผังเดียวกัน",
+    ],
+    challenges: [
+      "วางไอคอนอุปกรณ์จำนวนมากให้ตรงตำแหน่งบนแปลนโดยไม่บังการใช้งาน",
+      "ควบคุมอุปกรณ์หลายประเภทผ่าน Home Assistant ให้ตอบสนองแบบ Real-time",
+      "สรุปสถานะเปิด–ปิดของอุปกรณ์หลายสิบจุดให้อ่านได้ทันที",
+    ],
+    results: [
+      "ผู้ดูแลเปิด–ปิดแอร์ ERV และไฟจากผังอาคารได้จริง",
+      "เห็นสถานะอุปกรณ์ จำนวนคน กล้อง และคุณภาพอากาศบนหน้าจอเดียว",
+      "ลดการเดินตรวจสอบและสั่งงานอุปกรณ์ทีละจุดในอาคาร",
+    ],
+    featured: true,
+  },
+  {
     id: "rmuti-korat-digital-twin",
     organizationId: "rmuti-korat",
     title: "Digital Twin & Smart Building Kiosk",
@@ -92,6 +146,39 @@ export const projects: Project[] = [
     ],
   },
   {
+    id: "rmuti-surin-building-control",
+    organizationId: "rmuti-surin",
+    title: "ระบบควบคุมอาคารอัจฉริยะ",
+    tagline: "ผังควบคุมไฟ แอร์ และ ERV แบบ Real-time",
+    description:
+      "ระบบควบคุมอาคารอัจฉริยะบนผังพื้นที่จริงของ Co-Working Space ชั้น 1 เปิด–ปิดไฟ แอร์ และ ERV ได้จากแปลน ดูจำนวนคนเข้าพื้นที่ และค่าเซ็นเซอร์อุณหภูมิ ความชื้น CO₂ PM2.5 ความดันอากาศแบบ Real-time",
+    image: "/images/projects/rmuti-surin-building-control.png",
+    technologies: [
+      "Vue.js 3",
+      "Vuetify",
+      "Node.js",
+      "Express",
+      "Home Assistant",
+      "IoT",
+      "REST API",
+    ],
+    responsibilities: [
+      "พัฒนาหน้าผังควบคุมอาคารให้เลือกตึก โซน และห้อง แล้วควบคุมอุปกรณ์บนแปลน",
+      "เชื่อมสถานะไฟ แอร์ ERV และพัดลมระบายอากาศแบบ Real-time",
+      "แสดงจำนวนคนเข้าพื้นที่และค่าเซ็นเซอร์สภาพแวดล้อมบนผังเดียวกัน",
+    ],
+    challenges: [
+      "วางไอคอนอุปกรณ์ให้ตรงตำแหน่งบนแปลนโดยไม่บังการใช้งาน",
+      "สรุปสถานะเปิด–ปิดของอุปกรณ์หลายชนิดให้อ่านได้ทันที",
+      "อัปเดตเซ็นเซอร์และจำนวนคนโดยไม่ทำให้หน้าผังกระตุก",
+    ],
+    results: [
+      "ผู้ดูแลเปิด–ปิดไฟ แอร์ และ ERV จากผังอาคารได้จริง",
+      "เห็นจำนวนคนและคุณภาพอากาศของพื้นที่บนหน้าจอเดียว",
+      "ลดการเดินตรวจสอบอุปกรณ์ทีละจุดในอาคาร",
+    ],
+  },
+  {
     id: "rmuti-surin-digital-twin",
     organizationId: "rmuti-surin",
     title: "Smart Campus Digital Twin (Kiosk)",
@@ -126,6 +213,68 @@ export const projects: Project[] = [
       "ลดการเปิดหลายรายงาน — รวมข้อมูลสำคัญไว้บนจอเดียว",
     ],
     featured: true,
+  },
+  {
+    id: "psru-building-control",
+    organizationId: "psru",
+    title: "ระบบควบคุมอาคารอัจฉริยะ",
+    tagline: "PSRU Room Management — ผังควบคุมอุปกรณ์",
+    description:
+      "ระบบควบคุมอาคารอัจฉริยะของมหาวิทยาลัยราชภัฏพิบูลสงคราม เลือกตึก โซน และห้อง แล้วเปิด–ปิดไฟและพัดลมระบายอากาศจากผัง 3D ของอาคารศูนย์อาหารทะเลแก้วนิเวศ ดูสถานะอุปกรณ์แบบ Real-time",
+    image: "/images/projects/psru-building-control.png",
+    technologies: [
+      "Vue.js 3",
+      "Vuetify",
+      "Node.js",
+      "Express",
+      "Home Assistant",
+      "IoT",
+      "Microsoft SQL Server",
+    ],
+    responsibilities: [
+      "พัฒนาหน้าผังควบคุมอาคาร เลือกตึก โซน ห้อง และควบคุมอุปกรณ์บนแปลน 3D",
+      "แสดงไอคอนไฟและพัดลมบนผังตามสถานะเปิด–ปิดจริงของอุปกรณ์",
+      "เชื่อมการควบคุมอุปกรณ์ผ่าน Home Assistant และ API ของระบบ",
+    ],
+    challenges: [
+      "วางไอคอนอุปกรณ์ให้ตรงตำแหน่งบนผังโดยไม่บังรายละเอียดอาคาร",
+      "สะท้อนสถานะเปิด–ปิดของอุปกรณ์หลายจุดได้ทันที",
+    ],
+    results: [
+      "ผู้ดูแลเปิด–ปิดไฟและพัดลมจากผังอาคารได้จริง",
+      "เห็นสถานะอุปกรณ์ของแต่ละชั้นและโซนในหน้าจอเดียว",
+    ],
+  },
+  {
+    id: "psru-shop-invoice",
+    organizationId: "psru",
+    title: "ระบบออกใบเสร็จให้ร้านค้า",
+    tagline: "ใบแจ้งหนี้ค่าเช่า ค่าน้ำ ค่าไฟ จากมิเตอร์",
+    description:
+      "ระบบออกใบแจ้งหนี้ให้ร้านค้าในศูนย์อาหารทะเลแก้วนิเวศ คำนวณค่าเช่าพื้นที่ ค่าน้ำ และค่าไฟจากมิเตอร์จริง แสดงเลขอ่านก่อนหน้า/ปัจจุบัน หน่วยที่ใช้ อัตราต่อหน่วย ยอดรวมพร้อมตัวอักษรภาษาไทย และข้อมูลการโอนเงิน พิมพ์หรือดาวน์โหลดเป็น PDF ได้",
+    image: "/images/projects/psru-shop-invoice.png",
+    technologies: [
+      "Vue.js 3",
+      "Vuetify",
+      "Node.js",
+      "Express",
+      "Microsoft SQL Server",
+      "PDF",
+      "REST API",
+    ],
+    responsibilities: [
+      "พัฒนาหน้าใบแจ้งหนี้ของแต่ละร้านค้า พร้อมปุ่มพิมพ์และดาวน์โหลด PDF",
+      "ดึงเลขมิเตอร์น้ำและไฟฟ้าจากระบบ คำนวณหน่วยที่ใช้และยอดเงินตามอัตราต่อหน่วย",
+      "แสดงยอดรวมเป็นตัวเลขและตัวอักษรภาษาไทย พร้อมข้อมูลบัญชีสำหรับโอนเงิน",
+    ],
+    challenges: [
+      "คำนวณค่าน้ำค่าไฟจากเลขมิเตอร์ก่อนหน้าและปัจจุบันให้ถูกต้องทุกร้าน",
+      "จัดหน้าใบแจ้งหนี้ให้พิมพ์และส่งออกเป็น PDF ได้ตรงรูปแบบ",
+    ],
+    results: [
+      "ออกใบแจ้งหนี้ให้ร้านค้าได้จากระบบ ไม่ต้องคำนวณเอง",
+      "ลดความผิดพลาดจากการจดมิเตอร์และคิดเงินด้วยมือ",
+    ],
   },
   {
     id: "psru-smart-campus-kiosk",

@@ -19,7 +19,7 @@ export function Projects() {
           <SectionHeading
             eyebrow="Featured Projects"
             title="ผลงานตามมหาวิทยาลัย"
-            description="Digital Twin / Smart Building ที่นครราชสีมา, ระบบจองห้องและ Digital Twin ที่สุรินทร์, และชุดจอ Smart Campus Kiosk ที่ PSRU"
+            description="ระบบควบคุมอาคารและ Digital Twin ที่นครราชสีมา, ระบบจองห้องและ Digital Twin ที่สุรินทร์, และชุดจอ Smart Campus Kiosk ที่ PSRU"
           />
         </FadeIn>
 
